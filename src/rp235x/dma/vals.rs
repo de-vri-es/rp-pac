@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Calc {
     #[doc = "Calculate a CRC-32 (IEEE802.3 polynomial)"]
     CRC32 = 0x0,
@@ -48,8 +47,7 @@ impl From<Calc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum DataSize {
     SIZE_BYTE = 0x0,
     SIZE_HALFWORD = 0x01,
@@ -79,8 +77,7 @@ impl From<DataSize> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum TransCountMode {
     NORMAL = 0x0,
     TRIGGER_SELF = 0x01,
@@ -122,8 +119,7 @@ impl From<TransCountMode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum TreqSel {
     #[doc = "Select PIO0's TX FIFO 0 as TREQ"]
     PIO0_TX0 = 0x0,

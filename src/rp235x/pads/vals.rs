@@ -1,11 +1,10 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Drive {
-    _2M_A = 0x0,
-    _4M_A = 0x01,
-    _8M_A = 0x02,
-    _12M_A = 0x03,
+    _2MA = 0x0,
+    _4MA = 0x01,
+    _8MA = 0x02,
+    _12MA = 0x03,
 }
 impl Drive {
     #[inline(always)]
@@ -30,8 +29,7 @@ impl From<Drive> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum VoltageSelect {
     #[doc = "Set voltage to 3.3V (DVDD >= 2V5)"]
     _3V3 = 0x0,

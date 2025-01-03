@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkAdcCtrlAuxsrc {
     CLKSRC_PLL_USB = 0x0,
     CLKSRC_PLL_SYS = 0x01,
@@ -34,8 +33,7 @@ impl From<ClkAdcCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkGpoutCtrlAuxsrc {
     CLKSRC_PLL_SYS = 0x0,
     CLKSRC_GPIN0 = 0x01,
@@ -77,8 +75,7 @@ impl From<ClkGpoutCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkHstxCtrlAuxsrc {
     CLK_SYS = 0x0,
     CLKSRC_PLL_SYS = 0x01,
@@ -112,8 +109,7 @@ impl From<ClkHstxCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkPeriCtrlAuxsrc {
     CLK_SYS = 0x0,
     CLKSRC_PLL_SYS = 0x01,
@@ -147,8 +143,7 @@ impl From<ClkPeriCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkRefCtrlAuxsrc {
     CLKSRC_PLL_USB = 0x0,
     CLKSRC_GPIN0 = 0x01,
@@ -178,8 +173,7 @@ impl From<ClkRefCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkRefCtrlSrc {
     ROSC_CLKSRC_PH = 0x0,
     CLKSRC_CLK_REF_AUX = 0x01,
@@ -209,8 +203,7 @@ impl From<ClkRefCtrlSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkSysCtrlAuxsrc {
     CLKSRC_PLL_SYS = 0x0,
     CLKSRC_PLL_USB = 0x01,
@@ -244,8 +237,7 @@ impl From<ClkSysCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkSysCtrlSrc {
     CLK_REF = 0x0,
     CLKSRC_CLK_SYS_AUX = 0x01,
@@ -273,8 +265,7 @@ impl From<ClkSysCtrlSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum ClkUsbCtrlAuxsrc {
     CLKSRC_PLL_USB = 0x0,
     CLKSRC_PLL_SYS = 0x01,
@@ -308,8 +299,7 @@ impl From<ClkUsbCtrlAuxsrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum DftclkLposcCtrlSrc {
     NULL = 0x0,
     CLKSRC_PLL_USB_PRIMARY_LPOSC = 0x01,
@@ -339,8 +329,7 @@ impl From<DftclkLposcCtrlSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum DftclkRoscCtrlSrc {
     NULL = 0x0,
     CLKSRC_PLL_SYS_PRIMARY_ROSC = 0x01,
@@ -370,8 +359,7 @@ impl From<DftclkRoscCtrlSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum DftclkXoscCtrlSrc {
     NULL = 0x0,
     CLKSRC_PLL_USB_PRIMARY = 0x01,
@@ -401,8 +389,7 @@ impl From<DftclkXoscCtrlSrc> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Fc0src {
     NULL = 0x0,
     PLL_SYS_CLKSRC_PRIMARY = 0x01,

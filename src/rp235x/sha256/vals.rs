@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum DmaSize {
     _8BIT = 0x0,
     _16BIT = 0x01,

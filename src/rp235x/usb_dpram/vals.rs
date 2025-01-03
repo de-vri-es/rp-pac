@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum EpBufferControlDoubleBufferIsoOffset {
     _128 = 0x0,
     _256 = 0x01,
@@ -30,8 +29,7 @@ impl From<EpBufferControlDoubleBufferIsoOffset> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum EpControlEndpointType {
     CONTROL = 0x0,
     ISOCHRONOUS = 0x01,

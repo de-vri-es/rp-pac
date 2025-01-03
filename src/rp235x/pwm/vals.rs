@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Ch10csrDivmode {
     #[doc = "Free-running counting at rate dictated by fractional divider"]
     DIV = 0x0,
@@ -34,8 +33,7 @@ impl From<Ch10csrDivmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Ch11csrDivmode {
     #[doc = "Free-running counting at rate dictated by fractional divider"]
     DIV = 0x0,
@@ -69,8 +67,7 @@ impl From<Ch11csrDivmode> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Divmode {
     #[doc = "Free-running counting at rate dictated by fractional divider"]
     DIV = 0x0,

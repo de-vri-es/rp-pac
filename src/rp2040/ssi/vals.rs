@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum InstL {
     #[doc = "No instruction"]
     NONE = 0x0,
@@ -34,8 +33,7 @@ impl From<InstL> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum SpiFrf {
     #[doc = "Standard 1-bit SPI frame format; 1 bit per SCK, full-duplex"]
     STD = 0x0,
@@ -68,8 +66,7 @@ impl From<SpiFrf> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Tmod {
     #[doc = "Both transmit and receive"]
     TX_AND_RX = 0x0,
@@ -103,8 +100,7 @@ impl From<Tmod> for u8 {
     }
 }
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum TransType {
     #[doc = "Command and address both in standard SPI frame format"]
     _1C1A = 0x0,

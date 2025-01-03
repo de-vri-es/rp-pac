@@ -1,6 +1,5 @@
 #[repr(u8)]
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Perfsel {
     SIOB_PROC1_STALL_UPSTREAM = 0x0,
     SIOB_PROC1_STALL_DOWNSTREAM = 0x01,
